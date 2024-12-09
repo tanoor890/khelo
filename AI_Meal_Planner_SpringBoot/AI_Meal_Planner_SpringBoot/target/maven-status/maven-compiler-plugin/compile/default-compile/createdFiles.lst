@@ -1,0 +1,3 @@
+com\example\ai_meal_planner\AimealPlannerApplication.class
+com\example\ai_meal_planner\controller\MealPlannerController.class
+com\example\ai_meal_planner\model\Meal.class

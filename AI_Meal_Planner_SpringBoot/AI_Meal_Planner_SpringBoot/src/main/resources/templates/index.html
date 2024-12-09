@@ -1,0 +1,292 @@
+<!-- File: src/main/resources/templates/index.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>AI Meal Planner</title>
+        <!-- Embedded CSS -->
+        <style>
+            /* Global styles */
+            body {
+                background-image: url("https://images.unsplash.com/photo-1517245386807-9b4d0d6f9d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+                background-repeat: no-repeat;
+                background-size: cover;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 100vh;
+                background-color: rgba(230, 231, 251, 0.5); /* Fallback color */
+            }
+            
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            
+            h1, h2 {
+                color: #090707;
+                font-family: sans-serif;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 36px;
+                font-weight: 600;
+                margin-top: 30px;
+            }
+            
+            h2 {
+                font-size: 24px;
+                font-weight: 600;
+                margin-top: 30px;
+            }
+            
+            /* Form Container */
+            .form-container {
+                background-color: rgba(255, 255, 255, 0.9);
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                max-width: 600px;
+                width: 90%;
+                margin: 20px auto;
+            }
+            
+            /* Form Elements */
+            .form-group {
+                margin-bottom: 15px;
+            }
+            
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+                color: #333;
+            }
+            
+            input[type="number"],
+            input[type="text"],
+            select,
+            textarea {
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+            }
+            
+            textarea {
+                resize: vertical;
+            }
+            
+            .submit-btn {
+                background-color: #28a745;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                width: 100%;
+            }
+            
+            .submit-btn:hover {
+                background-color: #218838;
+            }
+            
+            /* Message Styles */
+            .message {
+                background-color: #f8d7da;
+                color: #721c24;
+                border: 1px solid #f5c6cb;
+                padding: 10px;
+                border-radius: 5px;
+                margin: 20px auto;
+                width: 90%;
+                text-align: center;
+                max-width: 600px;
+            }
+            
+            /* Results Section */
+            .results {
+                background-color: rgba(255, 255, 255, 0.95);
+                padding: 20px;
+                border-radius: 10px;
+                margin: 20px auto;
+                max-width: 800px;
+                width: 90%;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+            
+            .results p {
+                font-size: 18px;
+                color: #333;
+            }
+            
+            .meal-plans {
+                margin-top: 20px;
+            }
+            
+            .meal-item {
+                background-color: #fff;
+                padding: 15px;
+                border-radius: 5px;
+                margin-bottom: 15px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            
+            .meal-item h3 {
+                margin-top: 0;
+                color: #007bff;
+            }
+            
+            .grocery-list ul {
+                text-align: left;
+                display: inline-block;
+                padding-left: 20px;
+            }
+            
+            .feedback-section {
+                margin-top: 30px;
+            }
+            
+            /* Responsive Design */
+            @media (max-width: 600px) {
+                h1 {
+                    font-size: 28px;
+                }
+                
+                h2 {
+                    font-size: 20px;
+                }
+                
+                .submit-btn {
+                    font-size: 14px;
+                    padding: 8px 16px;
+                }
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>AI Meal Planner</h1>
+
+        <!-- Message Display -->
+        <div th:if="${message}" class="message">
+            <p th:text="${message}"></p>
+        </div>
+
+        <!-- Meal Planner Form -->
+        <form th:action="@{/calculate}" method="post" class="form-container">
+            <h2>Personal Information</h2>
+            <div class="form-group">
+                <label for="age">Age (years):</label>
+                <input type="number" id="age" name="age" min="1" max="120" required>
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" min="20" max="300" step="0.1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" name="height" min="50" max="300" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="activity">Activity Level:</label>
+                <select id="activity" name="activity" required>
+                    <option value="">Select activity level</option>
+                    <option value="sedentary">Sedentary (little to no exercise)</option>
+                    <option value="lightly_active">Lightly Active (light exercise 1-3 days/week)</option>
+                    <option value="moderately_active">Moderately Active (moderate exercise 3-5 days/week)</option>
+                    <option value="very_active">Very Active (hard exercise 6-7 days/week)</option>
+                    <option value="super_active">Super Active (very hard exercise & physical job)</option>
+                </select>
+            </div>
+
+            <h2>Goal</h2>
+            <div class="form-group">
+                <label for="goal">Select Your Goal:</label>
+                <select id="goal" name="goal" required>
+                    <option value="">Select goal</option>
+                    <option value="Loss">Weight Loss</option>
+                    <option value="Gain">Weight Gain</option>
+                    <option value="Maintain">Maintenance</option>
+                </select>
+            </div>
+
+            <h2>Dietary Preferences</h2>
+            <div class="form-group">
+                <label for="restrictions">Dietary Restrictions:</label>
+                <input type="text" id="restrictions" name="restrictions" placeholder="e.g., vegetarian, vegan">
+            </div>
+
+            <div class="form-group">
+                <label for="allergies">Allergies:</label>
+                <input type="text" id="allergies" name="allergies" placeholder="e.g., peanuts, dairy">
+            </div>
+
+            <button type="submit" class="submit-btn">Generate Meal Plan</button>
+        </form>
+
+        <!-- Results Section -->
+        <div th:if="${bmr != null}" class="results">
+            <h2>Your Results</h2>
+            <p><strong>BMR:</strong> <span th:text="${#numbers.formatDecimal(bmr, 0, 0)}"></span> calories/day</p>
+            <p><strong>TDEE:</strong> <span th:text="${#numbers.formatDecimal(tdee, 0, 0)}"></span> calories/day</p>
+
+            <h2>Your Meal Plan</h2>
+            <div th:if="${mealPlanDescription}" th:utext="${mealPlanDescription}"></div>
+
+            <div th:if="${mealPlan}" class="meal-plans">
+                <h2>Recipes</h2>
+                <div th:each="meal : ${mealPlan}" class="meal-item">
+                    <h3 th:text="${meal.name}"></h3>
+                    <div th:if="${meal.ingredients}">
+                        <p><strong>Ingredients:</strong></p>
+                        <p th:text="${#strings.arrayJoin(meal.ingredients, ', ')}"></p>
+                    </div>
+                    <div th:if="${meal.recipe}">
+                        <p><strong>Recipe:</strong></p>
+                        <p th:text="${meal.recipe}"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div th:if="${groceryList}" class="grocery-list">
+                <h2>Your Grocery List</h2>
+                <ul>
+                    <li th:each="item : ${groceryList}" th:text="${item}"></li>
+                </ul>
+            </div>
+
+            <div class="feedback-section">
+                <h2>Provide Feedback on Your Meal Plan</h2>
+                <form th:action="@{/feedback}" method="post">
+                    <div class="form-group">
+                        <label for="feedback">Feedback:</label>
+                        <textarea name="feedback" id="feedback" rows="5" 
+                                  placeholder="Enter your feedback here..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+

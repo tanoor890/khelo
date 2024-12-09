@@ -1,0 +1,164 @@
+{
+  "meals": [
+    {
+      "name": "Chicken Salad",
+      "ingredients": ["Chicken breast", "Lettuce", "Tomato", "Cucumber", "Olive oil"],
+      "recipe": "Mix all ingredients."
+    },
+    {
+      "name": "Vegetable Stir Fry",
+      "ingredients": ["Broccoli", "Carrot", "Bell pepper", "Soy sauce", "Tofu"],
+      "recipe": "Stir fry vegetables and tofu."
+    },
+    {
+      "name": "Grilled Salmon",
+      "ingredients": ["Salmon", "Lemon", "Garlic", "Herbs"],
+      "recipe": "Grill the salmon with herbs."
+    },
+    {
+      "name": "Quinoa Bowl",
+      "ingredients": ["Quinoa", "Black beans", "Corn", "Avocado"],
+      "recipe": "Mix and serve."
+    },
+    {
+      "name": "Spaghetti Aglio e Olio",
+      "ingredients": ["Spaghetti", "Garlic", "Olive oil", "Red pepper flakes", "Parsley"],
+      "recipe": "Cook spaghetti and toss with garlic, olive oil, and red pepper flakes. Garnish with parsley."
+    },
+    {
+      "name": "Cauliflower Tacos",
+      "ingredients": ["Cauliflower", "Taco seasoning", "Tortillas", "Lettuce", "Sour cream"],
+      "recipe": "Roast cauliflower with taco seasoning and serve in tortillas with lettuce and sour cream."
+    },
+    {
+      "name": "Beef Stir Fry",
+      "ingredients": ["Beef strips", "Bell peppers", "Onions", "Soy sauce", "Ginger", "Garlic"],
+      "recipe": "Stir fry beef with vegetables, ginger, and garlic, and add soy sauce."
+    },
+    {
+      "name": "Chicken Curry",
+      "ingredients": ["Chicken", "Curry powder", "Coconut milk", "Onions", "Garlic", "Tomato"],
+      "recipe": "Cook chicken in curry powder, coconut milk, and tomatoes. Serve with rice."
+    },
+    {
+      "name": "Greek Salad",
+      "ingredients": ["Cucumber", "Tomato", "Feta cheese", "Olives", "Red onion", "Olive oil", "Lemon"],
+      "recipe": "Mix cucumbers, tomatoes, feta, olives, and onion. Dress with olive oil and lemon juice."
+    },
+    {
+      "name": "Vegetarian Burrito",
+      "ingredients": ["Rice", "Black beans", "Avocado", "Lettuce", "Cheese", "Tortillas"],
+      "recipe": "Layer rice, black beans, avocado, lettuce, cheese in tortillas and roll up."
+    },
+    {
+      "name": "Eggplant Parmesan",
+      "ingredients": ["Eggplant", "Tomato sauce", "Mozzarella", "Parmesan", "Basil", "Breadcrumbs"],
+      "recipe": "Bread and fry eggplant slices, top with tomato sauce, mozzarella, and parmesan. Bake with breadcrumbs."
+    },
+    {
+      "name": "Lentil Soup",
+      "ingredients": ["Lentils", "Carrot", "Onion", "Garlic", "Vegetable broth", "Spinach"],
+      "recipe": "Cook lentils with carrots, onions, garlic, and vegetable broth. Stir in spinach at the end."
+    },
+    {
+      "name": "Shrimp Scampi",
+      "ingredients": ["Shrimp", "Garlic", "Butter", "Lemon", "Parsley", "Spaghetti"],
+      "recipe": "Cook shrimp in garlic butter, add lemon juice and parsley. Serve over spaghetti."
+    },
+    {
+      "name": "Vegetable Quiche",
+      "ingredients": ["Eggs", "Spinach", "Mushrooms", "Cheese", "Onion", "Pie crust"],
+      "recipe": "Bake eggs with spinach, mushrooms, cheese, and onion in a pie crust."
+    },
+    {
+      "name": "Chicken Fajitas",
+      "ingredients": ["Chicken", "Bell peppers", "Onions", "Fajita seasoning", "Tortillas"],
+      "recipe": "Cook chicken with bell peppers and onions in fajita seasoning. Serve in tortillas."
+    },
+    {
+      "name": "Avocado Toast",
+      "ingredients": ["Avocado", "Bread", "Olive oil", "Lemon", "Chili flakes"],
+      "recipe": "Mash avocado with lemon juice and chili flakes. Spread on toasted bread with olive oil."
+    },
+    {
+      "name": "Mushroom Risotto",
+      "ingredients": ["Arborio rice", "Mushrooms", "Vegetable broth", "Parmesan", "Garlic", "Onion"],
+      "recipe": "Cook rice with mushrooms, garlic, and onion. Add broth and cook until creamy. Stir in parmesan."
+    },
+    {
+      "name": "Poke Bowl",
+      "ingredients": ["Tuna", "Rice", "Avocado", "Cucumber", "Soy sauce", "Seaweed"],
+      "recipe": "Top rice with tuna, avocado, cucumber, and seaweed. Drizzle with soy sauce."
+    },
+    {
+      "name": "Tom Yum Soup",
+      "ingredients": ["Shrimp", "Lemongrass", "Galangal", "Lime leaves", "Chili", "Mushrooms", "Fish sauce"],
+      "recipe": "Cook shrimp with lemongrass, galangal, lime leaves, and chili. Add mushrooms and fish sauce for flavor."
+    },
+    {
+      "name": "Pasta Primavera",
+      "ingredients": ["Pasta", "Tomatoes", "Zucchini", "Garlic", "Olive oil", "Parmesan"],
+      "recipe": "Cook pasta and toss with sautéed garlic, zucchini, tomatoes, and olive oil. Top with parmesan."
+    },
+    {
+      "name": "Chickpea Salad",
+      "ingredients": ["Chickpeas", "Cucumber", "Red onion", "Tomato", "Olive oil", "Lemon", "Feta"],
+      "recipe": "Mix chickpeas with cucumber, onion, tomato, and feta. Dress with olive oil and lemon."
+    },
+    {
+      "name": "Pulled Pork Sandwich",
+      "ingredients": ["Pork shoulder", "BBQ sauce", "Buns", "Coleslaw"],
+      "recipe": "Slow cook pork in BBQ sauce. Serve on buns with coleslaw."
+    },
+    {
+      "name": "Falafel Wrap",
+      "ingredients": ["Falafel", "Hummus", "Cucumber", "Tomato", "Lettuce", "Pita bread"],
+      "recipe": "Fill pita bread with falafel, hummus, cucumber, tomato, and lettuce."
+    },
+    {
+      "name": "Beef Tacos",
+      "ingredients": ["Ground beef", "Taco seasoning", "Taco shells", "Lettuce", "Tomato", "Cheese"],
+      "recipe": "Cook ground beef with taco seasoning. Serve in taco shells with lettuce, tomato, and cheese."
+    },
+    {
+      "name": "Sushi Rolls",
+      "ingredients": ["Sushi rice", "Nori", "Tuna", "Avocado", "Cucumber", "Soy sauce"],
+      "recipe": "Roll sushi rice with tuna, avocado, and cucumber in nori. Serve with soy sauce."
+    },
+    {
+      "name": "Sweet Potato Fries",
+      "ingredients": ["Sweet potatoes", "Olive oil", "Salt", "Paprika"],
+      "recipe": "Cut sweet potatoes into fries, toss with olive oil, salt, and paprika. Bake until crispy."
+    },
+    {
+      "name": "Baked Ziti",
+      "ingredients": ["Ziti pasta", "Marinara sauce", "Mozzarella", "Parmesan", "Basil"],
+      "recipe": "Cook ziti pasta and toss with marinara sauce. Top with mozzarella and parmesan, then bake."
+    },
+    {
+      "name": "Chia Pudding",
+      "ingredients": ["Chia seeds", "Almond milk", "Vanilla extract", "Honey", "Berries"],
+      "recipe": "Mix chia seeds with almond milk, vanilla, and honey. Refrigerate overnight and top with berries."
+    },
+    {
+      "name": "Crispy Chicken Sandwich",
+      "ingredients": ["Chicken breast", "Breadcrumbs", "Lettuce", "Pickles", "Buns"],
+      "recipe": "Bread and fry chicken breast. Serve on buns with lettuce and pickles."
+    },
+    {
+      "name": "Mango Salsa",
+      "ingredients": ["Mango", "Red onion", "Cilantro", "Lime", "Chili"],
+      "recipe": "Chop mango, onion, and cilantro. Mix with lime juice and chili for a fresh salsa."
+    },
+    {
+      "name": "Pasta Carbonara",
+      "ingredients": ["Spaghetti", "Eggs", "Pancetta", "Parmesan", "Black pepper"],
+      "recipe": "Cook spaghetti and toss with pancetta, eggs, and Parmesan. Season with black pepper."
+    },
+    {
+      "name": "Tomato Basil Soup",
+      "ingredients": ["Tomatoes", "Basil", "Garlic", "Onion", "Cream"],
+      "recipe": "Cook tomatoes with garlic, onion, and basil. Puree and add cream for richness."
+    }
+  ]
+}
